@@ -9,6 +9,7 @@ body {
   align-items: center;
   color: white;
   font-size: medium;
+  width: 100vw;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h1 {
 }
 
 .header {
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +51,31 @@ h1 {
   margin: 0 10px;
 }
 
+.header__mobile {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-100vw);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  transition: all 1s;
+}
+@media screen and (min-width: 50rem) {
+  .header__mobile {
+    display: none;
+  }
+}
+.header__mobile.active {
+  transform: translateX(0);
+}
+.header__mobile a {
+  margin: 2rem;
+}
+
 .logo {
   margin-right: auto;
   transform: scale(0.6);
@@ -65,7 +92,6 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 40rem;
-  background-image: url("../public/background-presentation.webp");
   background-color: blue;
   background-size: cover;
   background-position: center;
@@ -81,7 +107,6 @@ h1 {
 .image-presentation {
   height: 30rem;
   width: 50rem;
-  background-image: url("../public/background-presentation.webp");
   background-size: cover;
   background-position: center;
   box-shadow: 10px;
@@ -149,18 +174,6 @@ h1 {
   display: flex;
 }
 
-@media screen and (min-width: 50rem) {
-  .mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 50rem) {
-  .computer {
-    display: none;
-  }
-}
-
 .articles {
   display: flex;
   flex-direction: row;
@@ -224,6 +237,11 @@ h1 {
   text-align: center;
 }
 
+.first-link {
+  align-self: flex-end;
+  margin-right: 5rem;
+}
+
 .last-link {
   margin-right: 5rem;
 }
@@ -242,7 +260,7 @@ h1 {
 }
 
 .article--3 {
-  background-image: url("/public/MSF135472.webp");
+  background-image: url("/public/syrie.jpg");
 }
 
 .article .title {
@@ -393,7 +411,7 @@ h1 {
 }
 @media screen and (max-width: 50rem) {
   .show .par--1 {
-    transform: translateX(calc(50vw + 4rem));
+    transform: translateX(calc(50vw + 2rem));
   }
 }
 
@@ -402,7 +420,7 @@ h1 {
 }
 @media screen and (max-width: 50rem) {
   .show .par--2 {
-    transform: translateX(calc(50vw - 2rem));
+    transform: translateX(calc(50vw - 4rem));
   }
 }
 
@@ -411,7 +429,7 @@ h1 {
 }
 @media screen and (max-width: 50rem) {
   .show .par--3 {
-    transform: translateX(calc(50vw - 8rem));
+    transform: translateX(calc(50vw - 10rem));
   }
 }
 
@@ -456,6 +474,7 @@ h1 {
   cursor: pointer;
 }
 .news__item .title {
+  margin-left: 0.5rem;
   color: red;
 }
 .news__item .title--big-red {
@@ -480,6 +499,7 @@ h1 {
   height: 2rem;
   width: 100vw;
   background-color: transparent;
+  margin-bottom: 2rem;
 }
 
 .wrap {
@@ -491,12 +511,14 @@ h1 {
 .article__button {
   background-color: red;
   border: none;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 3rem;
+  width: 4rem;
   border-radius: 5px;
   font-weight: 900;
   color: white;
   transition: transform 0.5s;
+  cursor: pointer;
+  margin: 1rem;
 }
 
 .category {
@@ -509,23 +531,32 @@ h1 {
   padding: 0.5rem;
   align-self: flex-start;
 }
-.category::after {
-  max-height: 10px;
-  width: 300px;
-  background-color: red;
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  content: "";
+@media screen and (max-width: 50rem) {
+  .category {
+    align-self: center;
+  }
 }
-.category::before {
-  max-height: 10px;
-  width: 300px;
-  background-color: red;
-  position: absolute;
-  top: -10px;
-  left: 0px;
-  content: "";
+
+.center {
+  align-self: center;
+}
+
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 50rem) {
+  .mobile {
+    display: block;
+  }
+}
+
+.computer {
+  display: block;
+}
+@media screen and (max-width: 50rem) {
+  .computer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

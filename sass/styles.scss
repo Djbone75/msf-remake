@@ -8,6 +8,7 @@ body {
   align-items: center;
   color: white;
   font-size: medium;
+  width: 100vw;
 }
 h1 {
   font-family: "Courier New", Courier, monospace, sans-serif;
@@ -23,6 +24,7 @@ h1 {
   transform: translateX(0px);
 }
 .header {
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +44,29 @@ h1 {
 .header a {
   margin: 0 10px;
 }
+.header__mobile {
+  @media screen and (min-width: 50rem) {
+    display: none;
+  }
+
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-100vw);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  transition: all 1s;
+  &.active {
+    transform: translateX(0);
+  }
+  & a {
+    margin: 2rem;
+  }
+}
 .logo {
   margin-right: auto;
   transform: scale(0.6);
@@ -56,7 +81,6 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 40rem;
-  background-image: url("../public/background-presentation.webp");
   background-color: blue;
   background-size: cover;
   background-position: center;
@@ -69,7 +93,6 @@ h1 {
 .image-presentation {
   height: 30rem;
   width: 50rem;
-  background-image: url("../public/background-presentation.webp");
   background-size: cover;
   background-position: center;
   box-shadow: 10px;
@@ -130,16 +153,7 @@ h1 {
 .actus {
   display: flex;
 }
-.mobile {
-  @media screen and (min-width: 50rem) {
-    display: none;
-  }
-}
-.computer {
-  @media screen and (max-width: 50rem) {
-    display: none;
-  }
-}
+
 .articles {
   display: flex;
   flex-direction: row;
@@ -195,6 +209,10 @@ h1 {
 .icon {
   text-align: center;
 }
+.first-link {
+  align-self: flex-end;
+  margin-right: 5rem;
+}
 .last-link {
   margin-right: 5rem;
 }
@@ -208,7 +226,7 @@ h1 {
   background-image: url("/public/MSB158742.jpg");
 }
 .article--3 {
-  background-image: url("/public/MSF135472.webp");
+  background-image: url("/public/syrie.jpg");
 }
 .article .title {
   -webkit-text-stroke: 1px #fff;
@@ -340,19 +358,19 @@ h1 {
 .show .par--1 {
   transform: translateX(calc(100vw / 2));
   @media screen and (max-width: 50rem) {
-    transform: translateX(calc((100vw / 2) + 4rem));
+    transform: translateX(calc((100vw / 2) + 2rem));
   }
 }
 .show .par--2 {
   transform: translateX(calc((100vw / 2) - 12rem));
   @media screen and (max-width: 50rem) {
-    transform: translateX(calc((100vw / 2) - 2rem));
+    transform: translateX(calc((100vw / 2) - 4rem));
   }
 }
 .show .par--3 {
   transform: translateX(calc((100vw / 2) - 24rem));
   @media screen and (max-width: 50rem) {
-    transform: translateX(calc((100vw / 2) - 8rem));
+    transform: translateX(calc((100vw / 2) - 10rem));
   }
 }
 .members {
@@ -392,6 +410,7 @@ h1 {
   flex-direction: column;
   cursor: pointer;
   & .title {
+    margin-left: 0.5rem;
     color: red;
   }
   & .title--big-red {
@@ -416,6 +435,7 @@ h1 {
   height: 2rem;
   width: 100vw;
   background-color: transparent;
+  margin-bottom: 2rem;
 }
 .wrap {
   position: relative;
@@ -425,12 +445,14 @@ h1 {
 .article__button {
   background-color: red;
   border: none;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 3rem;
+  width: 4rem;
   border-radius: 5px;
   font-weight: 900;
   color: white;
   transition: transform 0.5s;
+  cursor: pointer;
+  margin: 1rem;
 }
 .category {
   position: relative;
@@ -441,23 +463,22 @@ h1 {
   margin: 1rem 20rem;
   padding: 0.5rem;
   align-self: flex-start;
-
-  &::after {
-    max-height: 10px;
-    width: 300px;
-    background-color: red;
-    position: absolute;
-    bottom: -10px;
-    right: 0;
-    content: "";
+  @media screen and (max-width: 50rem) {
+    align-self: center;
   }
-  &::before {
-    max-height: 10px;
-    width: 300px;
-    background-color: red;
-    position: absolute;
-    top: -10px;
-    left: 0px;
-    content: "";
+}
+.center {
+  align-self: center;
+}
+.mobile {
+  display: none;
+  @media screen and (max-width: 50rem) {
+    display: block;
+  }
+}
+.computer {
+  display: block;
+  @media screen and (max-width: 50rem) {
+    display: none;
   }
 }
