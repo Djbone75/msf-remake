@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Alfa+Slab+One&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./sass/styles.css" />
+    <title>Medecins sans frontière</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="logo">
+        <img src="./public/logo.svg" alt="" />
+      </div>
+      <div class="computer">
+        <a>Actualités</a>
+        <a>Découvrir MSF</a>
+        <a>Décrypter</a>
+        <a>Agir avec MSF</a>
+      </div>
+      <div class="don">
+        <div class="separation"></div>
+        <button class="don__button">DONNEZ</button>
+        <div class="separation"></div>
+      </div>
+      <div class="computer last-link"><a>actions</a></div>
+      <div class="icon last-link mobile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <section class="presentation">
+      <div class="image-presentation"></div>
+    </section>
+    <div class="first"></div>
+    <div class="category">Grand formats</div>
+    <section class="">
+      <div class="wrapper">
+        <div class="articles">
+          <div class="article article--1 article-active">
+            <div class="description">
+              Mineurs non accompagnés à Paris : « C’est le naufrage de l’accueil
+              »
+            </div>
+            <div class="title">MINEURS</div>
+          </div>
+          <div class="article article--2">
+            <div class="description">
+              Les Palestiniens de Cisjordanie face à l'explosion de la violence
+              des colons
+            </div>
+            <div class="title">PALESTINE</div>
+          </div>
+          <div class="article article--3">
+            <div class="title">NON MAIS Vraiment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="category hidden">Actualités</div>
+    <div class="wrap">
+      <section class="news">
+        <div class="news__item">
+          <div class="title">conflit au Soudan</div>
+          <div class="description">
+            Dans les camps de transit surpeuplés du Soudan du Sud
+          </div>
+          <div class="date">23 Juin 2023</div>
+        </div>
+        <div class="news__item">
+          <div class="title">Soudan</div>
+          <div class="description">
+            Quand des obstructions bureaucratiques entravent l'action de MSF
+          </div>
+          <div class="date">12 Juin 2023</div>
+        </div>
+        <div class="news__item">
+          <div class="title">Naufrage en Grèce</div>
+          <div class="description">
+            L’Europe doit mettre fin à ses politiques mortifères et inhumaines
+          </div>
+          <div class="date">10 Juin 2023</div>
+        </div>
+        <div class="news__item">
+          <div class="title--big-red">MSF RECRUTE</div>
+          <div class="description">
+            MSF recrute en continu des profils spécialisés dans le domaine
+            médical
+          </div>
+          <div class="date">23 Juin 2023</div>
+        </div>
+      </section>
+    </div>
+    <div class="wrapper__article">
+      <button class="less article__button"><</button>
+      <button class="plus article__button">></button>
+    </div>
+    <div class="category">Qui sommmes Nous ?</div>
+    <section class="members hidden">
+      <div>
+        <div class="parallel par--1"></div>
+        <div class="parallel par--2"></div>
+        <div class="parallel par--3"></div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footer__col"></div>
+      <div class="footer__col"></div>
+      <div class="footer__col"></div>
+    </section>
+  </body>
+
+  <script src="app.js"></script>
+</html>
