@@ -6,9 +6,9 @@ const news = document.querySelector(".news");
 const presentation = document.querySelector(".presentation");
 const image_presentation = document.querySelector(".image-presentation");
 const headerMobile = document.querySelector(".header__mobile");
-news.style.transform = "translateX(calc(-11rem))";
 
-console.log(presentation);
+news.style.transform = "translateX(calc((100vw/2) - 11rem))";
+
 const buttonPlus = document.querySelector(".plus");
 const buttonLess = document.querySelector(".less");
 const buttonMobile = document.querySelector("#buttonMobile");
@@ -90,7 +90,7 @@ buttonPlus.addEventListener("click", () => {
     transformX = -11;
   }
 
-  news.style.transform = "translateX(" + transformX + "rem)";
+  news.style.transform = "translateX(calc((100vw/2) +" + transformX + "rem)";
 });
 buttonLess.addEventListener("click", () => {
   if (transformX != -11) {
@@ -99,5 +99,5 @@ buttonLess.addEventListener("click", () => {
     transformX = -77;
   }
 
-  news.style.transform = "translateX(" + transformX + "rem)";
+  news.style.transform = "translateX(calc((100vw/2) +" + transformX + "rem)";
 });

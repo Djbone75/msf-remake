@@ -11,6 +11,7 @@ body {
   color: white;
   font-size: medium;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -348,6 +349,7 @@ a {
 }
 
 .news {
+  position: absolute;
   left: 0;
   top: 0;
   height: 12rem;
@@ -403,7 +405,8 @@ a {
 .wrap {
   position: relative;
   height: 12rem;
-  width: 1px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .article__button {
