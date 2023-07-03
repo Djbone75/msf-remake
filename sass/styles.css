@@ -11,7 +11,6 @@ body {
   color: white;
   font-size: medium;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -338,7 +337,6 @@ a {
   width: 100vw;
   background-color: transparent;
   overflow: hidden;
-  background-color: aqua;
 }
 @media screen and (min-width: 50rem) {
   .wrapper {
