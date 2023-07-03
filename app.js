@@ -12,6 +12,7 @@ news.style.transform = "translateX(calc((100vw/2) - 11rem))";
 const buttonPlus = document.querySelector("#plus");
 const buttonLess = document.querySelector("#less");
 const buttonMobile = document.querySelector("#buttonMobile");
+const donButton = document.querySelector(".don__button");
 
 buttonMobile.addEventListener("click", () => {
   headerMobile.classList.add("active");
@@ -40,10 +41,12 @@ window.onscroll = function (e) {
     header.classList.remove("visible");
     don.classList.remove("visible");
     logo.classList.remove("visible");
+    donButton.classList.remove("visible");
   } else {
     header.classList.add("visible");
     don.classList.add("visible");
     logo.classList.add("visible");
+    donButton.classList.add("visible");
   }
 };
 let counter = 2;
@@ -89,8 +92,8 @@ buttonPlus.addEventListener("click", () => {
   } else {
     transformX = -11;
   }
-
-  news.style.transform = "translateX(calc((100vw/2) +" + transformX + "rem)";
+  console.log(transformX);
+  news.style.transform = "translateX(calc((100vw/2) + " + transformX + "rem)";
 });
 buttonLess.addEventListener("click", () => {
   if (transformX != -11) {
