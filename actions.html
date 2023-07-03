@@ -23,31 +23,32 @@
   </head>
   <body>
     <section class="header">
-      <a class="logo" href="index.html">
-        <img src="./public/logo.svg" alt="" />
-      </a>
-      <div class="computer">
+      <div class="logo">
+        <a href="index.html"><img src="./public/logo.svg" alt="" /></a>
+      </div>
+      <span class="computer">
         <a>Actualités</a>
         <a>Découvrir MSF</a>
         <a>Décrypter</a>
         <a>Agir avec MSF</a>
-      </div>
+      </span>
 
       <div class="don">
-        <a class="don__button" href="https://soutenir.msf.fr/faire-un-don/"
-          >DONNEZ</a
-        >
+        <div class="don__button">
+          <div class="separation"></div>
+          <button>donnez</button>
+          <div class="separation"></div>
+        </div>
       </div>
 
       <div class="computer last-link"><a href="actions.html">FRANCE</a></div>
-
       <div class="icon last-link mobile" id="buttonMobile">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
           fill="currentColor"
-          class="bi bi-list"
+          class="mobile"
           viewBox="0 0 16 16"
         >
           <path
@@ -57,15 +58,16 @@
         </svg>
       </div>
     </section>
-    <section class="header__mobile">
-      <a class="logo" href="index.html">
+
+    <section class="header__mobile mobile">
+      <a class="logo">
         <img src="./public/logo.svg" alt="" />
       </a>
       <a>Actualités</a>
       <a>Découvrir MSF</a>
       <a>Décrypter</a>
       <a>Agir avec MSF</a>
-      <a href="actions.html">FRANCE</a>
+      <a href="actions">actions en France</a>
     </section>
     <div class="first"></div>
     <section class="news"></section>
