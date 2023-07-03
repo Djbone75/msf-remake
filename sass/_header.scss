@@ -82,6 +82,9 @@
   font-weight: 900;
   color: $color-font-tertiary;
   transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .don__button:hover {
   transform: scale(1.2);
