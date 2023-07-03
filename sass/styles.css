@@ -411,12 +411,7 @@ a {
   position: relative;
   height: 12rem;
   width: 100vw;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.wrap::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .article__button {

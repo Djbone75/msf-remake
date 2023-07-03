@@ -146,12 +146,7 @@
   position: relative;
   height: 12rem;
   width: 100vw;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow: hidden;
 }
 .article__button {
   background-color: $color-primary;

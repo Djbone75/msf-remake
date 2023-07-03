@@ -35,7 +35,6 @@ actionArticle.innerHTML = articles[0].article;
 item.style.backgroundImage = "url('/public/" + articles[0].image + "')";
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    console.log(e);
     actionTitle.innerHTML = articles[e.target.value].title;
     actionDescription.innerHTML = articles[e.target.value].description;
     actionArticle.innerHTML = articles[e.target.value].article;

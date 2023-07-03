@@ -9,8 +9,8 @@ const headerMobile = document.querySelector(".header__mobile");
 
 news.style.transform = "translateX(calc((100vw/2) - 11rem))";
 
-const buttonPlus = document.querySelector(".plus");
-const buttonLess = document.querySelector(".less");
+const buttonPlus = document.querySelector("#plus");
+const buttonLess = document.querySelector("#less");
 const buttonMobile = document.querySelector("#buttonMobile");
 
 buttonMobile.addEventListener("click", () => {
@@ -68,7 +68,7 @@ presentation.style.backgroundImage =
   "url('/public/title--" + imageNumber + ".jpg')";
 image_presentation.style.backgroundImage =
   "url('/public/title--" + imageNumber + ".jpg')";
-let hello = () => {
+let slideNews = () => {
   imageNumber++;
   if (imageNumber > 3) {
     imageNumber = 1;
@@ -80,7 +80,7 @@ let hello = () => {
     "url('/public/title--" + imageNumber + ".jpg')";
 };
 let Interval3s = setInterval(slide, 3000);
-let newInterval = setInterval(hello, 3000);
+let newInterval = setInterval(slideNews, 3000);
 
 let transformX = -11;
 buttonPlus.addEventListener("click", () => {
