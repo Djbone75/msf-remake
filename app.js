@@ -66,6 +66,8 @@ let slide = () => {
 let imageNumber = 1;
 presentation.style.backgroundImage =
   "url('/public/title--" + imageNumber + ".jpg')";
+image_presentation.style.backgroundImage =
+  "url('/public/title--" + imageNumber + ".jpg')";
 let hello = () => {
   imageNumber++;
   if (imageNumber > 3) {

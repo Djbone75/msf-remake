@@ -1,0 +1,31 @@
+.footer {
+  background-color: $color-primary;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: 50rem) {
+    flex-direction: row;
+  }
+}
+.footer__col {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 1rem 2rem;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $color-font-secondary;
+  @media screen and (min-width: 50rem) {
+    border-bottom: none;
+  }
+}
+.footer p {
+  color: white;
+  margin-top: 0;
+  &.address {
+    font-size: small;
+    color: rgb(187, 185, 185);
+  }
+}

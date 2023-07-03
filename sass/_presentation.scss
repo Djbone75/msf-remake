@@ -1,0 +1,30 @@
+.presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  background-color: $color-mix;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: lighten;
+  width: 100%;
+  @media screen and (max-width: 50rem) {
+    height: 30rem;
+  }
+}
+.image-presentation {
+  height: 30rem;
+  width: 50rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px;
+  transform: translateY(10rem);
+  margin-bottom: 1rem;
+  @media screen and (max-width: 50rem) {
+    width: 80vw;
+    transform: translateY(3rem);
+  }
+  @media screen and (min-width: 50rem) {
+  }
+}

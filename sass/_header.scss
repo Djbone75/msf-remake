@@ -1,0 +1,105 @@
+.header {
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  transition: all 1s;
+  width: 100vw;
+}
+.header.visible {
+  background-color: $color-secondary;
+  color: $color-font-secondary;
+}
+.header a {
+  margin: 0 10px;
+}
+.header__mobile {
+  @media (min-width: 50rem) {
+    display: none;
+  }
+  transform: calc(-100% - 5rem);
+  z-index: 103;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: calc(-100vw);
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-font-secondary;
+  transition: all 1s;
+  &.active {
+    left: 0;
+  }
+  & a {
+    margin: 2rem;
+    color: $color-font-tertiary;
+  }
+}
+.logo {
+  margin-right: auto;
+  transform: scale(0.6);
+  transition: all 1s;
+}
+.logo.visible {
+  transform: scale(0.5);
+}
+.don {
+  color: transparent;
+  transition: all 1s;
+  width: 0px;
+  overflow: hidden;
+  height: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.don.visible {
+  color: $color-primary;
+  width: 15rem;
+  height: 80%;
+}
+.don.visible:hover {
+  color: $color-primary;
+  width: 17rem;
+  height: 80%;
+}
+.don__button {
+  background-color: $color-primary;
+  border: none;
+  height: 3rem;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 900;
+  color: $color-font-tertiary;
+  transition: transform 0.5s;
+}
+.don__button:hover {
+  transform: scale(1.2);
+}
+.separation {
+  width: 1px;
+  background-color: $color-font-secondary;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  height: 100%;
+}
+.first-link {
+  align-self: flex-end;
+  margin-right: 5rem;
+}
+.last-link {
+  margin-right: 5rem;
+}
+.icon {
+  text-align: center;
+}

@@ -1,0 +1,72 @@
+$color-primary: #d9001a;
+$color-secondary: white;
+
+$color-font-primary: black;
+$color-font-secondary: rgb(161, 161, 161);
+$color-font-tertiary: white;
+
+$color-mix: blue;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-font-tertiary;
+  font-size: medium;
+  width: 100vw;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  font-weight: 900;
+}
+.hidden {
+  opacity: 1;
+}
+
+.show {
+  opacity: 1;
+  color: $color-primary;
+  transform: translateX(0px);
+}
+.center {
+  align-self: center;
+}
+.mobile {
+  display: none;
+  @media screen and (max-width: 50rem) {
+    display: block;
+  }
+}
+.computer {
+  display: block;
+  @media screen and (max-width: 50rem) {
+    display: none;
+  }
+}
+.first {
+  position: static;
+  margin-top: 5rem;
+}
+.category {
+  position: relative;
+  font-size: 40px;
+  font-weight: 900;
+  color: $color-font-tertiary;
+  background-color: $color-primary;
+  margin: 1rem 20rem;
+  padding: 0.5rem;
+  align-self: flex-start;
+  @media screen and (max-width: 50rem) {
+    align-self: center;
+  }
+}
+a {
+  text-decoration: none;
+  color: $color-font-secondary;
+}
