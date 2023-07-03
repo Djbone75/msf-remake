@@ -22,10 +22,10 @@
   }
 }
 .footer p {
-  color: white;
+  color: $color-font-tertiary;
   margin-top: 0;
   &.address {
     font-size: small;
-    color: rgb(187, 185, 185);
+    color: $color-font-secondary;
   }
 }

@@ -232,7 +232,7 @@ a {
 }
 .footer p.address {
   font-size: small;
-  color: rgb(187, 185, 185);
+  color: rgb(161, 161, 161);
 }
 
 .actus {
@@ -624,7 +624,7 @@ a {
 }
 .action__item .title {
   color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px white;
   text-transform: uppercase;
   text-align: left;
   margin: 1rem;

@@ -27,7 +27,7 @@
   align-items: flex-start;
   & .title {
     color: transparent;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px $color-font-tertiary;
     text-transform: uppercase;
     text-align: left;
     margin: 1rem;
