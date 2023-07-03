@@ -82,7 +82,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center;
   height: 5rem;
   position: fixed;
   top: 0;
@@ -151,7 +150,7 @@ a {
 
 .don.visible {
   color: #d9001a;
-  width: 15rem;
+  width: 10rem;
   height: 80%;
 }
 
@@ -174,6 +173,9 @@ a {
   justify-content: center;
   align-items: center;
 }
+.don__button a {
+  color: white;
+}
 
 .don__button:hover {
   transform: scale(1.2);
@@ -193,10 +195,13 @@ a {
 }
 
 .last-link {
-  margin-right: 5rem;
+  margin-right: 1rem;
 }
 
 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -406,7 +411,12 @@ a {
   position: relative;
   height: 12rem;
   width: 100vw;
-  overflow: hidden;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .article__button {
