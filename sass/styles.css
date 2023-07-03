@@ -128,13 +128,26 @@ a {
 }
 
 .logo {
-  margin-right: auto;
-  transform: scale(0.6);
   transition: all 1s;
+  margin-left: 1rem;
+  margin-right: auto;
+  transform: scale(0.5);
+  width: 5rem;
+}
+@media (min-width: 50rem) {
+  .logo {
+    transform: scale(0.8);
+    width: 10rem;
+  }
 }
 
 .logo.visible {
-  transform: scale(0.5);
+  transform: scale(0.4);
+}
+@media (min-width: 50rem) {
+  .logo.visible {
+    transform: scale(0.7);
+  }
 }
 
 .don {
